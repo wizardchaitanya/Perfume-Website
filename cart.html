@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart — AURA FRAGRANCES</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- ─────────── NAVIGATION ─────────── -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">AURA</a>
+    <ul class="nav__links">
+      <li><a href="index.html#about" class="nav__link">Our Story</a></li>
+      <li><a href="index.html#products" class="nav__link">Collection</a></li>
+      <li><a href="index.html#features" class="nav__link">Philosophy</a></li>
+      <li><a href="cart.html" class="nav__link nav__link--cta">Cart</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html#about" class="mobile-menu__link">Our Story</a></li>
+      <li><a href="index.html#products" class="mobile-menu__link">Collection</a></li>
+      <li><a href="index.html#features" class="mobile-menu__link">Philosophy</a></li>
+      <li><a href="cart.html" class="mobile-menu__link">Cart</a></li>
+    </ul>
+  </div>
+
+  <!-- ─────────── CART PAGE ─────────── -->
+  <section class="cart-page">
+    <div class="cart-page__header">
+      <h1 class="cart-page__title">Shopping Cart</h1>
+      <p class="cart-page__subtitle">Your Curated Selection</p>
+    </div>
+
+    <div class="cart-page__content">
+      <!-- Cart Items -->
+      <div class="cart-page__items" id="cart-items">
+        <!-- Items will be populated by JavaScript -->
+        <div class="cart-empty" id="cart-empty">
+          <p>Your cart is empty</p>
+          <a href="index.html#products" class="btn btn--gold">Continue Shopping</a>
+        </div>
+      </div>
+
+      <!-- Cart Summary -->
+      <div class="cart-page__summary">
+        <div class="cart-summary">
+          <h3 class="cart-summary__title">Order Summary</h3>
+
+          <div class="cart-summary__row">
+            <span>Subtotal</span>
+            <span id="subtotal">₹ 0</span>
+          </div>
+
+          <div class="cart-summary__row">
+            <span>Shipping</span>
+            <span id="shipping">₹ 0</span>
+          </div>
+
+          <div class="cart-summary__row">
+            <span>Tax</span>
+            <span id="tax">₹ 0</span>
+          </div>
+
+          <div class="cart-summary__divider"></div>
+
+          <div class="cart-summary__row cart-summary__row--total">
+            <span>Total</span>
+            <span id="total">₹ 0</span>
+          </div>
+
+          <button class="btn btn--gold btn--large" id="checkout-btn" style="width: 100%; margin-top: 2rem;">
+            Proceed to Checkout
+          </button>
+
+          <a href="index.html#products" class="btn btn--outline" style="width: 100%; margin-top: 1rem; justify-content: center;">
+            Continue Shopping
+          </a>
+
+          <div class="cart-summary__info">
+            <p><strong>Shipping:</strong> Free on orders over ₹ 5,000</p>
+            <p><strong>Delivery:</strong> 3-5 business days</p>
+            <p><strong>Returns:</strong> 30-day return policy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── FOOTER ─────────── -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p class="footer__logo">AURA</p>
+        <p class="footer__tagline">Crafted Scents. Timeless Identity.</p>
+      </div>
+
+      <div class="footer__nav">
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#about">Our Story</a></li>
+            <li><a href="index.html#products">Collection</a></li>
+            <li><a href="index.html#features">Philosophy</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@aurafragrances.com">hello@aurafragrances.com</a></li>
+            <li><a href="tel:+912212345678">+91 22 1234 5678</a></li>
+            <li><span>Mumbai, India</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 AURA Fragrances. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="cart-page.js"></script>
+</body>
+</html>
